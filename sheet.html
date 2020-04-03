@@ -1,0 +1,615 @@
+<div class='sheet-maindiv'>
+    <div class="sheet-3colrow">
+        <textarea name='attr_things' class='sheet-horror sheet-additionalrules'></textarea>
+        <div class="sheet-col">
+            <table>
+                <tr>
+                    <td style='text-align:left;'>
+                        <label class='sheet-nameRankXp'>Name:</label>
+                        <input type="text" name="attr_name" /><br/>
+                        <label class='sheet-nameRankXp'>Rang:</label>
+                        <select name='attr_rank' value='novice' class='sheet-rank'>
+                            <option value='Novice'>Anfänger</option>
+                            <option value='Seasoned'>Fortgeschritten</option>
+                            <option value='Veteran'>Veteran</option>
+                            <option value='Heroic'>Heroisch</option>
+                            <option value='Legendary'>Legendär</option>
+                        </select>
+                        <br/>
+                        <label class='sheet-nameRankXp'>Aufstiege:</label><input type="number" name="attr_xp" style='margin-left:4px;'/><br/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div class="sheet-col">
+            <p style="text-align: center;">
+            <img src="http://i.imgur.com/iwIoTlT.png" style="max-height: 100px;" /><br/>
+            </p>
+        </div>
+
+        <div class="sheet-col">
+            <table>
+                <tr>
+                    <td>
+                        <label>Setting:</label><input type="text" name="attr_setting" /><br/>
+                        <label>Rasse:</label><input type="text" name="attr_race" /><br/>
+                        <label>Konzept:</label><input type="text" name="attr_concept" /><br/>
+                    </td>   
+                </tr>   
+            </table>
+        </div>
+
+    </div>
+
+    <div style='text-align:center;'>
+    </div>
+
+    <hr/>
+
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col">
+
+            <h3 style="margin-bottom: 10px; text-align: center;">Attribute</h3>
+
+            <label>Geschickl.</label>
+            <select name="attr_agility" class="dtype" value='4'>
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <button type='roll' name='roll_Agility' value='@{name} - Geschicklichkeit: [[{1d@{agility}, 1d6!}kh1  + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br />
+            <label>Verstand</label>
+            <select name="attr_smarts" class="dtype" value='4'>
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <button type='roll' name='roll_Smarts' value='@{name} - Verstand: [[{1d@{smarts}, 1d6!}kh1  + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br />
+            <label>Willenskr.</label>
+            <select name="attr_spirit" class="dtype" value='4'>
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <button type='roll' name='roll_Spirit' value='@{name} - Willenskraft: [[{1d@{spirit}, 1d6!}kh1  + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br />
+            <label>Stärke</label>
+            <select name="attr_strength" class="dtype" value='4'>
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <button type='roll' name='roll_Strength' value='@{name} - Stärke: [[{1d@{strength}, 1d6!}kh1  + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br />
+            <label>Konst.</label>
+            <select name="attr_vigor" class="dtype" value='4'>
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <button type='roll' name='roll_Vigor' value='@{name} - Konstitution: [[{1d@{vigor}, 1d6!}kh1  + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br />
+
+        </div>
+
+        <div class="sheet-col">
+            <h3 style="text-align: center;">Abgeleitete Werte</h3>
+
+            <table class='sheet-DStatsTable'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Basis</th>
+                        <th>Mod.</th>
+                        <th>Rüst.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bewegung:</td>
+                        <td><input type="number" name="attr_pace" class="sheet-short" value="6" /></td>
+                        <td><input type="number" name="attr_paceMod" class="sheet-short" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td>Parade:</td>
+                        <td><input type="number" name="attr_parry" class="sheet-short" value="((@{fighting}-((1 - @{fightingTrained}) * 4))/2)+2" disabled="true" /></td>
+                        <td><input type="number" name="attr_parryMod" class="sheet-short" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td>Robustheit:</td>
+                        <td><input type="number" name="attr_toughness" class="sheet-short" value="floor(((@{Vigor})/2)+2+@{toughnessmod}+@{toughnessarmor})" disabled="true" /></td>
+                        <td><input type="number" name="attr_toughnessMod" class="sheet-short" value="0" /></td>
+                        <td><input type="number" name="attr_toughnessArmor" class="sheet-short" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td>Vermögen:</td>
+                        <td><input type="number" name="attr_money" class="sheet-short" value="0" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Munition:</td>
+                        <td><input type="number" name="attr_ammunition" class="sheet-short" value="0" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Bennys (max)</td>
+                        <td><input type='number' name='attr_benny_max' value='3'></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style='width: 100%;'>
+                <thead>
+                    <tr>
+                        <td style='width: 25%; text-align: center;'>Wunden</td>
+                        <td style='width: 25%; text-align: center;'>Erschöpf.</td>
+                        <td style='width: 50%; text-align: center;'>Notizen</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style='width: 100%;'>
+                        <td style='width: 50%; text-align: center;'><input type='number' name='attr_wound' value='0'></td>
+                        <td style='width: 50%; text-align: center;'><input type='number' name='attr_fatigue' value='0'></td> 
+                        <td style='width: 50%; text-align: center;'><input type='text' name='attr_woundFatigueNotes'></td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sheet-col">
+            <h3 style="text-align: center;">Makros</h3>
+            <table>
+                <tr>
+                    <td>Ungeübter Wurf: </td>
+                    <td>
+                        <button type='roll' class='sheet-MacroButtons' name='roll_WCUnskilled' value='@{name} - Ungeübter Wurf: [[{1d4!, 1d6!}kh1-2  + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]]'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Schaden Nahkampf: </td>
+                    <td>
+                        <button type='roll' class='sheet-MacroButtons' name='roll_MeleeDam' value='@{name} - Nahkampfschaden: [[?{Waffenschaden|1d6}! + 1d@{strength}![Strength] + ?{Modifikator, z.B. +2/-2|0}[Modifier] + ?{Steigerung? (1 = ja)|0}d6![Raise]]]'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Schaden Fernkampf: </td>
+                    <td>
+                        <button type='roll' class='sheet-MacroButtons' name='roll_RangedDam' value='@{name} - Fernkampfschaden: [[?{Waffenschaden|1d6}! + ?{Modifikator, z.B. +2/-2}[Modifier] + ?{Steigerung? (1 = ja)|0}d6![Raise]]]'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sprinten</td>
+                    <td><button type='roll' name='roll_run' value='@{name} - Sprinten: [[1d?{Sprintwürfel|6} + ?{Modifikator, z.B. +2/-2}}[Modifier] - @{wound}[Wounds]]]'></button></td>
+                </tr>
+                <tr>
+                    <td>Steigerungen: </td>
+                    <td><button type='roll' name='roll_raiseCalc' value='[[floor((?{Ergebnis|0}-?{Ziel|4})/4)]] Steigerungen'></button> </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col sheet-skills">
+            <h3 style="margin-bottom: 5px;">Fertigkeiten</h3>
+            <h5 style="margin-bottom: 5px;">Kein Haken = ungeübt</h5>
+
+            <label style="width:100px;">Allgemeinwiss.</label>
+            <select name="attr_knowledge" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_knowledgeTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Knowledge' value='@{name} - Allgemeinwissen: [[{1d@{knowledge}, 1d6!}kh1 - ((1 - @{knowledgeTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Athletik</label>
+
+            <select name="attr_climbing" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_climbingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Climbing' value='@{name} - Athletik: [[{1d@{climbing}, 1d6!}kh1 - ((1 - @{climbingTrained}) * 2)   + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Heimlichkeit</label>
+
+            <select name="attr_stealth" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_stealthTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Stealth' value='@{name} - Heimlichkeit: [[{1d@{stealth}, 1d6!}kh1 - ((1 - @{stealthTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+
+            <label style="width:100px;">Überreden</label>
+            <select name="attr_persuasion" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_persuasionTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Persuasion' value='@{name} - Überreden: [[{1d@{persuasion}, 1d6!}kh1 - ((1 - @{persuasionTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>            
+
+            <label style="width:100px;">Wahrnehmung</label>
+
+            <select name="attr_notice" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_noticeTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Notice' value='@{name} - Wahrnehmung: [[{1d@{notice}, 1d6!}kh1 - ((1 - @{noticeTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>            
+
+
+            <!-- andere: -->
+
+            <label style="width:100px;">Kämpfen</label>
+
+            <select name="attr_fighting" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_fightingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_fighting' value='@{name} - Kämpfen: [[{1d@{fighting}, 1d6!}kh1 - ((1 - @{fightingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>            
+
+
+            <label style="width:100px;">Darbietung</label>
+            <select name="attr_acting" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_actingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Acting' value='@{name} - Darbietung: [[{1d@{acting}, 1d6!}kh1 - ((1 - @{actingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>            
+
+            <label style="width:100px;">Diebeskunst</label>
+
+            <select name="attr_lockpicking" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_lockpickingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Lockpicking' value='@{name} - Diebeskunst: [[{1d@{lockpicking}, 1d6!}kh1 - ((1 - @{lockpickingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>            
+
+            <label style="width:100px;">Einschüchtern</label>
+
+            <select name="attr_intimidation" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_intimidationTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Intimidation' value='@{name} - Einschüchtern: [[{1d@{intimidation}, 1d6!}kh1 - ((1 - @{intimidationTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Reparieren</label>
+
+            <select name="attr_repair" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_repairTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Repair' value='@{name} - Ingenieurskunst: [[{1d@{repair}, 1d6!}kh1 - ((1 - @{repairTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Heilen</label>
+
+            <select name="attr_healing" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_healingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Healing' value='@{name} - Heilen: [[{1d@{healing}, 1d6!}kh1 - ((1 - @{healingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Strategie</label>
+            <select name="attr_battle" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_battleTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Battle' value='@{name} - Strategie: [[{1d@{battle}, 1d6!}kh1 - ((1 - @{battleTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+        </div>
+
+        <div class="sheet-col sheet-skills">
+            <h3>Fertigkeiten</h3>
+            <h5 style="margin-bottom: 5px;">Kein Haken = ungeübt</h5>
+
+            <label style="width:100px;">Provozieren</label>
+
+            <select name="attr_taunt" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_tauntTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Taunt' value='@{name} - Provozieren: [[{1d@{taunt}, 1d6!}kh1 - ((1 - @{tauntTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+
+            <label style="width:100px;">Recherche</label>
+
+            <select name="attr_investigation" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_investigationTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Investigation' value='@{name} - Recherche: [[{1d@{investigation}, 1d6!}kh1 - ((1 - @{investigationTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Reiten</label>
+
+            <select name="attr_riding" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_ridingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Riding' value='@{name} - Reiten: [[{1d@{riding}, 1d6!}kh1 - ((1 - @{ridingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+
+            <label style="width:100px;">Schießen</label>
+
+            <select name="attr_shooting" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_shootingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_shooting' value='@{name} - Schießen: [[{1d@{shooting}, 1d6!}kh1 - ((1 - @{shootingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+
+
+            <label style="width:100px;">Seefahrt</label>
+            <select name="attr_boating" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_boatingTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Boating' value='@{name} - Seefahrt: [[{1d@{boating}, 1d6!}kh1 - ((1 - @{boatingTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Überleben</label>
+
+            <select name="attr_survival" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_survivalTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Survival' value='@{name} - Überleben: [[{1d@{survival}, 1d6!}kh1 - ((1 - @{survivalTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Wissen</label>
+
+            <select name="attr_science" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_scienceTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_Science' value='@{name} - Wissenschaft: [[{1d@{science}, 1d6!}kh1 - ((1 - @{scienceTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+            <label style="width:100px;">Glücksspiel</label>
+
+            <select name="attr_gamble" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_gambleTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_gamble' value='@{name} - Glücksspiel: [[{1d@{gamble}, 1d6!}kh1 - ((1 - @{gambleTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+
+            <label style="width:100px;">Zaubern</label>
+
+            <select name="attr_magic" class="dtype">
+                <option value="4!">d4</option>
+                <option value="6!">d6</option>
+                <option value="8!">d8</option>
+                <option value="10!">d10</option>
+                <option value="12!">d12</option>
+                <option value="12!+1">d12+1</option>
+                <option value="12!+2">d12+2</option>
+                <option value="12!+3">d12+3</option>
+                <option value="12!+4">d12+4</option>
+            </select>
+            <input type='checkbox' name='attr_magicTrained' value='1' class='sheet-trainedchk'>
+            <button type='roll' name='roll_magic' value='@{name} - Zaubern: [[{1d@{magic}, 1d6!}kh1 - ((1 - @{magicTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+
+
+            <h3 style="margin-bottom: 10px;">Andere Fertigkeiten</h3>
+            <fieldset class="repeating_skills">
+                <input type="text" name="attr_skillname" style='width:127px;'/>
+                <select name="attr_dtype" class="dtype">
+                    <option value="4!">d4</option>
+                    <option value="6!">d6</option>
+                    <option value="8!">d8</option>
+                    <option value="10!">d10</option>
+                    <option value="12!">d12</option>
+                    <option value="12!+1">d12+1</option>
+                    <option value="12!+2">d12+2</option>
+                    <option value="12!+3">d12+3</option>
+                    <option value="12!+4">d12+4</option>
+                </select>
+                <input type='checkbox' name='attr_skillTrained' value='1' class='sheet-trainedchk'>
+                <button type='roll' name='roll_skillTrained' value='@{name} - @{skillname}: [[{1d@{dtype}, 1d6!}kh1 - ((1 - @{skillTrained}) * 2) + ?{Modifikator, z.B. +2/-2}[Modifier] - @{wound}[Wounds] - @{fatigue}[Fatigue]]]'></button><br/>
+            </fieldset>
+        </div>
+
+        <div class="sheet-col">
+            <h3>Handicaps</h3>
+
+            <textarea name="attr_hindrances" class='sheet-smalltextarea'></textarea><br/>
+            <h3>Talente</h3>
+
+            <textarea name="attr_edges" class='sheet-smalltextarea'></textarea>
+            <h3>Ausrüstung</h3>
+
+            <textarea name="attr_gear" class='sheet-smalltextarea'></textarea>
+            <h3 style='display:inline;'>Mächte</h3><input type='checkbox' name='attr_hasPowers' class='sheet-hasPowers' style='display:inline;'>
+            <textarea name='attr_powers' class='sheet-hiddenElement sheet-powers sheet-smalltextarea'></textarea>
+        </div>
+
+    </div>
+
+</div>
+
